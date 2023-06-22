@@ -1,0 +1,6 @@
+<div [ngClass]="{ type: task.delux} " class="task" (dblclick)="onToggle(task)"> 
+<h3  >{{task?.name}} <fa-icon   [ngStyle]="{ color: 'red' }" [icon]="faTimes" (click)="onDelete(task)"></fa-icon> </h3>
+<p>{{task.type}} </p>
+</div>
+
+<!-- <div class="me">  tytftf</div> -->
