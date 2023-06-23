@@ -39,7 +39,13 @@ this.allTask = this.tasks.rooms.filter((t:any) => t.id !== task.id )
 
 toggleReminder(task: any) {
   task.reminder = !task.reminder
-  console.log(task.reminder)
+  this.taskServiceService.updateTaskReminder(task).subscribe()
 }
+
+addTask(task: any){
+this.taskServiceService.addTask(task).subscribe((task) =>  {
+this.tasks.push(task)  
+
+ })}
 
 }
